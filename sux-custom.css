@@ -1,0 +1,132 @@
+/* Example CSS for Siebel Smartphone UX (20.9 or higher)*/
+
+/* (c) 2020 blacksheep IT consulting, use at your own risk*/
+
+/*slim header*/
+
+#_sweappmenu {
+    height: 40px;
+    padding: 0px 0px;
+}
+
+.siebui-view-navs .siebui-hb-header {
+    max-width: 50%;
+}
+
+.siebui-L2-on #_swecontent, .siebui-L3-on #_swecontent {
+    height: calc(100% - 120px);
+}
+
+#_sweappmenu.siebui-search-bar-on {
+    height: 80px;
+}
+
+/*List applet tiles*/
+
+.siebui-tile {
+    box-shadow: none;
+    border-radius: 0px;
+    margin: 0px!important;
+    border-bottom: 1px solid lightgrey;
+    padding: 8px;
+}
+
+.siebui-tile .siebui-fieldset:nth-child(1) {
+    margin-bottom: 6px;
+}
+
+.siebui-tile .siebui-fieldset:nth-child(1) .siebui-value {
+    font-size: 1.6em;
+}
+
+.siebui-tile-selected {
+    background: #cce4db;
+}
+
+.siebui-tile .siebui-fieldset.siebui-form-data input {
+    pointer-events: none;
+}
+
+/*Detail navigation*/
+
+.siebui-subview-screennavs .siebui-nav-tabs .ui-state-focus::before, .siebui-subview-navs .siebui-nav-tabs .ui-state-focus::before, .siebui-subview-screennavs .siebui-nav-tabs .ui-state-active::before, .siebui-subview-navs .siebui-nav-tabs .ui-state-active::before {
+    height: 6px;
+    background: #2ad895;
+    top: 0px;
+}
+
+.siebui-subview-screennavs .siebui-nav-tabs li, .siebui-subview-navs .siebui-nav-tabs li {
+    width: min-content;
+}
+
+ul.ui-tabs-nav.ui-corner-all.ui-helper-reset.ui-helper-clearfix.ui-widget-header.siebui-nav-hb-open.siebui-nav-hb-visible.siebui-nav-hb-expanded {
+    width: 200vw!important;
+}
+
+.siebui-subview-screennavs .siebui-nav-tabs, .siebui-subview-navs .siebui-nav-tabs {
+    background: #4b4540 url(../../images/redwood_texture_01.png);
+}
+
+/*Columns Displayed not working, this fixes height but still not working on phone*/
+
+.siebui-popup-column select {
+    height: 50vh!important;
+}
+
+td.siebui-popup-ctrl:nth-child(2) {
+    bottom: 0px!important;
+}
+
+/*custom Google Map URL, JS generated*/
+
+.bcrm-gmap {
+    font-weight: bold;
+    color: #3F51B5;
+    cursor: pointer;
+}
+
+/*custom attributes, JS generated, example for Account Status*/
+
+div[bcrm-field='Account.Account Status'][bcrm-data='Active']:before {
+    background: #43A047;
+    content: "Active";
+    color: white;
+    padding-left: 12px;
+    border-radius: 49px;
+    font-size: 1.1em;
+    padding-right: 15px;
+}
+
+/*custom 2-column layout for tile, JS generated*/
+
+#bcrm-wrapper .siebui-value {
+    font-size: inherit;
+}
+
+#bcrm-wrapper {
+    display: grid;
+    grid-template-columns: max-content auto;
+}
+
+#bcrm-wrapper div[bcrm-field='Account.Account Status'] {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.siebui-tile.siebui-editable #bcrm-wrapper {
+    display: initial;
+}
+
+/*Bookshelf ControlsMenu example*/
+.bcrm-menu {
+    border-radius: 10px;
+    margin: 6px;
+    width: 95vw!important;
+    background: gainsboro;
+}
+.bcrm-menu button {
+    border-radius: 50%!important;
+    height: 48px;
+    font-size: 1.4em;
+    margin-top: 15px!important;
+}
